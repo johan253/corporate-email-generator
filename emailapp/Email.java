@@ -2,12 +2,12 @@ package emailapp;
 import java.util.Scanner;
 
 public class Email {
+    public final int defaultPasswordLength = 10;
     private String firstName;
     private String lastName;
     private String password;
     private String department;
     private int mailboxCapacity;
-    private int defaultPasswordLength;
     private String alternameEmail;
 
     // constructor to receive the first and last name
@@ -18,11 +18,15 @@ public class Email {
 
         // call a method asking for the department - return dept
         this.department = setDepartment();
-        System.out.println("Despartment: " + this.department);
+        System.out.println("Department: " + this.department);
 
         //call a method that returns a random password
         this.password = randomPassword(defaultPasswordLength);
         System.out.println("Your password is: " + this.password);
+
+        //call a method that returns a mailbox capacity
+        this.mailboxCapacity = setMailboxCapacity();
+        System.out.println("Mailbox capacity set to: " + this.mailboxCapacity);
     }
 
     // Ask for the department
@@ -53,7 +57,12 @@ public class Email {
     }
 
     // set a mailbox capacity
-
+    public int setMailboxCapacity() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter your desired mailbox capacity: ");
+        int out = in.nextInt();
+        return out;
+    }
     // set the altername email
 
     // change the password
