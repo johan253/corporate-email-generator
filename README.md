@@ -1,2 +1,2 @@
-# test-repo
- This is my first repo, dipping my toes in the water.
+# small-java-programs
+ This is my first repo, where I will be putting (as the title says) my small Java program
